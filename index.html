@@ -52,9 +52,28 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
       <div class="container hero__inner">
-
         <div class="hero__content">
-          <h1 class="hero__name">Tai Dinh</h1>
+          <!-- ADD: Headshot upload + name -->
+          <div class="hero__identity">
+            <label class="hero__headshot" for="headshotInput" title="Upload your headshot">
+              <img
+                id="headshotPreview"
+                src=""
+                alt="Tai Dinh headshot"
+                hidden
+              >
+              <span id="headshotPlaceholder" aria-hidden="true">
+                <i class="fa-solid fa-camera"></i>
+              </span>
+              <input
+                id="headshotInput"
+                type="file"
+                accept="image/*"
+                hidden
+              >
+            </label>
+            <h1 class="hero__name">Tai Dinh</h1>
+          </div>
           <p class="hero__role">
             <span id="typed"></span><span class="cursor" aria-hidden="true">|</span>
           </p>
@@ -285,6 +304,15 @@
           <a href="https://github.com/taindinh07-coder" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
+
+      <!-- Senku image -->
+          <div class="contact__art" data-reveal>
+            <img
+              src="senku.png"
+              alt="Senku-inspired manga illustration"
+            >
+          </div>
+      
     </section>
 
   </main>
