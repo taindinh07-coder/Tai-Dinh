@@ -1,10 +1,10 @@
-[![Header](https://img.shields.io/badge/Portfolio-Tai's%203D%20Showcase-brightgreen?style=for-the-badge)](app)
+[![Header](https://img.shields.io/badge/Portfolio-Tai's%203D%20Showcase-brightgreen?style=for-the-badge)](https://taindinh07-coder.github.io/Tai-Dinh/)
 
 # Tai Dinh - Portfolio Website
 A summary website of my professional experience and projects as an MIS & SCM student at the University of Houston.
 
 ## 🌐 Website
-Portfolio Link: 
+Portfolio Link: [taindinh07-coder.github.io](https://taindinh07-coder.github.io/Tai-Dinh/)
 
 ## 📄 About Me
 Hey there! I'm Tai, an MIS and SCM student at the University of Houston pursuing a career in data analytics and software engineering. From website design, back-end integration, and process automation, I aspire to learn everything and grow my knowledge and skillset to turn ideas into a captivating experience for my users.  
@@ -14,7 +14,7 @@ Hey there! I'm Tai, an MIS and SCM student at the University of Houston pursuing
 
 ## 🔧 Technical Skills
 - **Programming**: Python, SQL, JavaScript, HTML/CSS
-- **Data Analysis**: Pandas, Selenium, PowerBI, Excel
+- **Data Analysis**: Pandas, Selenium, PowerBI, Excel, NumPy
 - **Tools**: Power Automate, Git, Microsoft Suite
 
 ## 📞 Lets Connect!
