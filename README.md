@@ -21,3 +21,25 @@ Hey there! I'm Tai, an MIS and SCM student at the University of Houston pursuing
 - **Email**: taindinh07@gmail.com
 - **LinkedIn**: [linkedin.com/in/tai-nhat-dinh](https://www.linkedin.com/in/tai-nhat-dinh)
 - **GitHub**: [https://github.com/taindinh07](https://github.com/taindinh07-coder)
+
+## 🏗️ Local Development
+
+```bash
+# Clone the repository
+git clone [https://taindinh07-coder.github.io/Tai-Dinh/]
+
+# Navigate to project directory
+cd [taindinh07-coder.github.io/Tai-Dinh]
+
+# Open in your preferred editor
+code .
+
+# Serve locally (using Live Server extension in VS Code or)
+python -m http.server 8000
+```
+
+## 📱 Browser Support
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
