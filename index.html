@@ -16,6 +16,7 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <canvas id="stars" aria-hidden="true"></canvas>
@@ -26,6 +27,7 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
+
       <a href="#top" class="nav__mark">T<span>.</span>DINH</a>
 
       <nav class="nav__nav">
@@ -40,287 +42,558 @@
 
       <div class="nav__right">
         <a class="nav__cta" href="assets/Tai Dinh Resume 2027.pdf" download>Résumé</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
+
     </div>
   </header>
+
 
   <main id="main">
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
       <div class="container hero__inner">
+
         <div class="hero__content">
-          <!-- ADD: Headshot upload + name -->
+
+          <!-- Headshot + Name -->
           <div class="hero__identity">
-            <label class="hero__headshot" for="headshotInput" title="Upload your headshot">
+
+            <div class="hero__headshot">
               <img
-                id="headshotPreview"
-                src=""
+                src="assets/Headshot.png"
                 alt="Tai Dinh headshot"
-                hidden
               >
-              <span id="headshotPlaceholder" aria-hidden="true">
-                <i class="fa-solid fa-camera"></i>
-              </span>
-              <input
-                id="headshotInput"
-                type="file"
-                accept="image/*"
-                hidden
-              >
-            </label>
+            </div>
+
             <h1 class="hero__name">Tai Dinh</h1>
+
           </div>
+
           <p class="hero__role">
-            <span id="typed"></span><span class="cursor" aria-hidden="true">|</span>
+            <span id="typed"></span>
+            <span class="cursor" aria-hidden="true">|</span>
           </p>
+
           <p class="hero__bio">
             I study Management Information Systems &amp; Supply Chain Management, and I build
             neat software on the side. I like taking messy systems — data, workflows, spreadsheets —
             and turning them into something that runs itself.
           </p>
+
           <div class="hero__ctas">
             <a href="#projects" class="btn btn--primary">View Projects</a>
             <a href="#contact" class="btn btn--ghost">Get In Touch</a>
           </div>
+
         </div>
 
+
         <div class="hero__visual" aria-hidden="true">
+
           <svg class="rings" viewBox="0 0 400 400">
-            <ellipse cx="200" cy="200" rx="184" ry="120" class="ring ring--outer"/>
-            <ellipse cx="200" cy="200" rx="140" ry="90" class="ring ring--inner" transform="rotate(-18 200 200)"/>
+
+            <ellipse
+              cx="200"
+              cy="200"
+              rx="184"
+              ry="120"
+              class="ring ring--outer"
+            />
+
+            <ellipse
+              cx="200"
+              cy="200"
+              rx="140"
+              ry="90"
+              class="ring ring--inner"
+              transform="rotate(-18 200 200)"
+            />
+
           </svg>
+
           <div class="core"></div>
           <div class="satellite"></div>
+
         </div>
 
       </div>
+
+
       <a href="#about" class="scroll-cue" aria-label="Scroll to content">
         <span></span>
       </a>
+
     </section>
+
 
     <!-- ============ ABOUT ============ -->
     <section class="section" id="about">
+
       <div class="container">
+
         <div class="section__head" data-reveal>
           <span class="eyebrow">// about</span>
           <h2 class="section__title">Turning systems into software</h2>
         </div>
 
+
         <div class="about__grid">
+
           <div class="about__text" data-reveal>
+
             <p>
               Hey how's it going! I'm Tai, a Junior that has been drawn into the compelxities of Management Information Systems and Supply Chain
-              because of the complex problem solving and critical thinking that always challenges me to grow and learn new skills. I like to program and started web development and learning python because 
+              because of the complex problem solving and critical thinking that always challenges me to grow and learn new skills. I like to program and started web development and learning python because
               I love building my own personal projects and can create anything I imagine. This led me to seeking challenging problems that I enjoy - from cleaning messy data sets or shipping actionable results that people will actually use.
             </p>
+
             <p>
               Right now, I am currently developing personal python/web devleopment projects that bridge strategic data analysis and my personal hobbies/interests while seeking Summer 2027 internships.
             </p>
+
           </div>
 
+
           <aside class="telemetry" data-reveal>
+
             <div class="telemetry__row">
               <span class="telemetry__label">Focus</span>
               <span class="telemetry__value">Data Analytics &amp; Software Engineering</span>
             </div>
+
             <div class="telemetry__row">
               <span class="telemetry__label">Education</span>
               <span class="telemetry__value">University of Houston</span>
             </div>
+
             <div class="telemetry__row">
               <span class="telemetry__label">Major</span>
               <span class="telemetry__value">MIS &amp; SCM</span>
             </div>
+
             <div class="telemetry__row">
               <span class="telemetry__label">Status</span>
               <span class="telemetry__value">Open to Data Analytics/SWE internships</span>
             </div>
+
           </aside>
+
         </div>
+
       </div>
+
     </section>
+
 
     <!-- ============ EXPERIENCE ============ -->
     <section class="section" id="experience">
+
       <div class="container">
+
         <div class="section__head" data-reveal>
           <span class="eyebrow">// experience</span>
           <h2 class="section__title">Where I've worked</h2>
         </div>
 
+
         <div class="timeline">
+
           <div class="timeline__item" data-reveal>
-            <p class="timeline__meta">JUN 2026 — AUG 2026</p>
-            <h3 class="timeline__role">Operations Intern</h3>
-            <p class="timeline__org">Amazon</p>
+
+            <p class="timeline__meta">
+              JUN 2026 — AUG 2026
+            </p>
+
+            <h3 class="timeline__role">
+              Operations Intern
+            </h3>
+
+            <p class="timeline__org">
+              Amazon
+            </p>
+
             <ul class="timeline__list">
-              <li>Architected an Inventory Consolidation dashboard through AWS migration (Lambda, API Gateway, DynamoDB) via AWS CDK</li>
-              <li>Engineered a Slack bot via Python (Slack Web API, Selenium) cutting fault-detection latency to ~1 min across 300+ daily alerts</li>
-              <li>Streamlined outbound sortation to reduce CPT deviation by 20%, driving 95%+ last-mile delivery compliance across shipments</li>
+
+              <li>
+                Architected an Inventory Consolidation dashboard through AWS migration
+                (Lambda, API Gateway, DynamoDB) via AWS CDK
+              </li>
+
+              <li>
+                Engineered a Slack bot via Python (Slack Web API, Selenium) cutting
+                fault-detection latency to ~1 min across 300+ daily alerts
+              </li>
+
+              <li>
+                Streamlined outbound sortation to reduce CPT deviation by 20%, driving
+                95%+ last-mile delivery compliance across shipments
+              </li>
+
             </ul>
+
           </div>
+
+        </div>
+
+      </div>
 
     </section>
 
+
     <!-- ============ PROJECTS ============ -->
     <section class="section" id="projects">
+
       <div class="container">
+
         <div class="section__head" data-reveal>
           <span class="eyebrow">// projects</span>
           <h2 class="section__title">Things I've built</h2>
         </div>
 
+
         <div class="projects__grid">
 
           <article class="project-card tilt" data-reveal>
+
             <p class="project-card__index">01</p>
-            <h3 class="project-card__title">Inventory Forecasting Tool</h3>
+
+            <h3 class="project-card__title">
+              Inventory Forecasting Tool
+            </h3>
+
             <p class="project-card__desc">
               Predicts short-term stock needs from historical sales data, so a small team stops
               guessing reorder timing. Replace this with your real project description.
             </p>
+
             <div class="project-card__tags">
               <span class="tag">Python</span>
               <span class="tag">Pandas</span>
               <span class="tag">scikit-learn</span>
             </div>
+
             <div class="project-card__links">
-              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Live
+              </a>
             </div>
+
           </article>
 
+
           <article class="project-card tilt" data-reveal>
+
             <p class="project-card__index">02</p>
-            <h3 class="project-card__title">Campus Marketplace</h3>
+
+            <h3 class="project-card__title">
+              Campus Marketplace
+            </h3>
+
             <p class="project-card__desc">
               A full-stack web app for students to buy and sell textbooks on campus. Swap in
               your own project name, stack, and a one-line description of the problem it solves.
             </p>
+
             <div class="project-card__tags">
               <span class="tag">JavaScript</span>
               <span class="tag">Flask</span>
               <span class="tag">SQL</span>
             </div>
+
             <div class="project-card__links">
-              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Live
+              </a>
             </div>
+
           </article>
 
+
           <article class="project-card tilt" data-reveal>
+
             <p class="project-card__index">03</p>
-            <h3 class="project-card__title">Supply Chain Dashboard</h3>
+
+            <h3 class="project-card__title">
+              Supply Chain Dashboard
+            </h3>
+
             <p class="project-card__desc">
               An interactive dashboard visualizing logistics and inventory data across
               warehouses. Describe the data source, the decisions it supports, and the impact.
             </p>
+
             <div class="project-card__tags">
               <span class="tag">SQL</span>
               <span class="tag">Power BI</span>
               <span class="tag">Excel</span>
             </div>
+
             <div class="project-card__links">
-              <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+              <a href="#">
+                <i class="fa-brands fa-github"></i>
+                Code
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                Live
+              </a>
             </div>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
+
 
     <!-- ============ SKILLS ============ -->
     <section class="section" id="skills">
+
       <div class="container">
+
         <div class="section__head" data-reveal>
           <span class="eyebrow">// skills</span>
           <h2 class="section__title">What I work with</h2>
         </div>
 
+
         <div class="skills" data-reveal>
 
-          <div class="skills__group">
-            <p class="skills__group-title">Languages &amp; Databases</p>
-            <div class="skills__grid">
-              <div class="skill-card"><i class="fa-brands fa-python"></i><span>Python</span></div>
-              <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-              <div class="skill-card"><i class="fa-brands fa-square-js"></i><span>JavaScript</span></div>
-              <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-              <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-            </div>
-          </div>
 
           <div class="skills__group">
-            <p class="skills__group-title">Frameworks &amp; Libraries</p>
+
+            <p class="skills__group-title">
+              Languages &amp; Databases
+            </p>
+
             <div class="skills__grid">
-              <div class="skill-card"><i class="fa-solid fa-flask"></i><span>Flask</span></div>
-              <div class="skill-card"><i class="fa-brands fa-react"></i><span>React</span></div>
-              <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-              <div class="skill-card"><i class="fa-solid fa-chart-line"></i><span>Pandas</span></div>
-              <div class="skill-card"><i class="fa-brands fa-selenium"></i><span>Selenium</span></div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <span>SQL</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-square-js"></i>
+                <span>JavaScript</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+
             </div>
+
           </div>
 
+
           <div class="skills__group">
-            <p class="skills__group-title">Tools &amp; Platforms</p>
+
+            <p class="skills__group-title">
+              Frameworks &amp; Libraries
+            </p>
+
             <div class="skills__grid">
-              <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
-              <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-              <div class="skill-card"><i class="fa-solid fa-table-cells"></i><span>Excel</span></div>
-              <div class="skill-card"><i class="fa-solid fa-chart-column"></i><span>Power BI</span></div>
-              <div class="skill-card"><i class="fa-solid fa-vscode"></i><span>VSCode</span></div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-flask"></i>
+                <span>Flask</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-react"></i>
+                <span>React</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Pandas</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-selenium"></i>
+                <span>Selenium</span>
+              </div>
+
             </div>
+
+          </div>
+
+
+          <div class="skills__group">
+
+            <p class="skills__group-title">
+              Tools &amp; Platforms
+            </p>
+
+            <div class="skills__grid">
+
+              <div class="skill-card">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-table-cells"></i>
+                <span>Excel</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Power BI</span>
+              </div>
+
+              <div class="skill-card">
+                <i class="fa-solid fa-vscode"></i>
+                <span>VSCode</span>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
+
 
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
+
       <div class="container">
+
         <span class="eyebrow">// contact</span>
-        <h2 class="contact__title" data-reveal>Let's build something.</h2>
+
+        <h2 class="contact__title" data-reveal>
+          Let's build something.
+        </h2>
+
         <p class="contact__text" data-reveal>
           I'm open to software engineering/data analytics internships and new project collaborations.
           The fastest way to reach me is by email.
         </p>
+
         <div class="contact__actions" data-reveal>
-          <a href="mailto:taindinh07@gmail.com" class="btn btn--primary">
-            <i class="fa-solid fa-envelope"></i> taindinh07@gmail.com
+
+          <a
+            href="mailto:taindinh07@gmail.com"
+            class="btn btn--primary"
+          >
+            <i class="fa-solid fa-envelope"></i>
+            taindinh07@gmail.com
           </a>
-          <a href="assets/Tai Dinh Resume 2027.pdf" class="btn btn--ghost" download>
-            <i class="fa-solid fa-download"></i> Résumé
+
+          <a
+            href="assets/Tai Dinh Resume 2027.pdf"
+            class="btn btn--ghost"
+            download
+          >
+            <i class="fa-solid fa-download"></i>
+            Résumé
           </a>
+
         </div>
+
+
         <div class="social-row" data-reveal>
-          <a href="https://www.linkedin.com/in/tai-dinh-296556327/" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/taindinh07-coder" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+
+          <a
+            href="https://www.linkedin.com/in/tai-dinh-296556327/"
+            class="social-link"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+
+          <a
+            href="https://github.com/taindinh07-coder"
+            class="social-link"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
         </div>
+
       </div>
 
+
       <!-- Senku image -->
-          <div class="contact__art" data-reveal>
-            <img
-              src="senku.png"
-              alt="Senku-inspired manga illustration"
-            >
-          </div>
-      
+      <div class="contact__art" data-reveal>
+
+        <img
+          src="senku.png"
+          alt="Senku-inspired manga illustration"
+        >
+
+      </div>
+
     </section>
 
   </main>
 
+
   <footer class="footer">
-    <p>© <span id="year"></span> Tai Dinh — built with HTML, CSS &amp; JS.</p>
+
+    <p>
+      © <span id="year"></span>
+      Tai Dinh — built with HTML, CSS &amp; JS.
+    </p>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
