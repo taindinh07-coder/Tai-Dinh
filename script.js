@@ -215,4 +215,54 @@
     resize();
     draw();
   }
+
+    /* ---------------------------------------------------
+     Hero headshot upload + local preview
+  --------------------------------------------------- */
+  
+  const headshotInput = document.getElementById('headshotInput');
+  const headshotPreview = document.getElementById('headshotPreview');
+  const headshotPlaceholder = document.getElementById('headshotPlaceholder');
+  
+  const savedHeadshot = localStorage.getItem('taiHeadshot');
+  
+  
+  /* Display the uploaded image */
+  
+  const showHeadshot = (src) => {
+  
+    if (!headshotPreview || !headshotPlaceholder) return;
+  
+    headshotPreview.src = src;
+    headshotPreview.hidden = false;
+  
+    headshotPlaceholder.hidden = true;
+  };
+  /* Restore previously uploaded headshot */
+  
+  if (savedHeadshot) {
+    showHeadshot(savedHeadshot);
+  }
+  /* Handle new headshot upload */
+  
+  if (headshotInput) {
+    headshotInput.addEventListener('change', (event) => {
+      const file = event.target.files?.[0];
+      if (!file || !file.type.startsWith('image/')) {
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        const src = reader.result;
+        showHeadshot(src);
+        /*
+         * Saves the image locally in the browser.
+         * It does not upload the image to a server.
+         */
+        localStorage.setItem('taiHeadshot', src);
+  
+      };
+      reader.readAsDataURL(file);
+    });
+  }
 })();
