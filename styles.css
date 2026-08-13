@@ -674,3 +674,240 @@ main, .nav, .footer { position: relative; z-index: 1; }
   .timeline { padding-left: 26px; }
   .timeline__item::before { left: -26px; }
 }
+
+/* =========================================================
+   HERO HEADSHOT
+   ========================================================= */
+
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 14px;
+}
+
+.hero__identity .hero__name {
+  margin-bottom: 0;
+}
+
+
+/* Circular headshot upload frame */
+
+.hero__headshot {
+  position: relative;
+  flex: 0 0 auto;
+
+  width: 88px;
+  height: 88px;
+
+  border-radius: 50%;
+  border: 1px solid var(--panel-border-strong);
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(79, 227, 193, 0.16),
+      transparent 60%
+    ),
+    var(--panel);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow:
+    0 0 24px rgba(79, 227, 193, 0.08);
+
+  transition:
+    border-color .25s,
+    box-shadow .25s,
+    transform .25s;
+}
+
+.hero__headshot:hover {
+  border-color: var(--cyan);
+
+  box-shadow:
+    0 0 28px rgba(79, 227, 193, 0.2);
+
+  transform: translateY(-2px);
+}
+
+
+/* Uploaded headshot */
+
+.hero__headshot img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* Camera placeholder */
+
+.hero__headshot span {
+  color: var(--text-faint);
+  font-size: 1.25rem;
+}
+
+
+/* Upload label */
+
+.hero__headshot::after {
+  content: 'UPLOAD';
+
+  position: absolute;
+  inset: auto 0 0;
+
+  padding: 3px 0;
+
+  background: rgba(6, 9, 17, 0.82);
+
+  color: var(--cyan);
+
+  font-family: var(--font-mono);
+  font-size: .5rem;
+  letter-spacing: .08em;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transition: opacity .25s;
+}
+
+.hero__headshot:hover::after {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CONTACT / SENKU IMAGE
+   ========================================================= */
+
+.contact__split {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(280px, 420px);
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+
+/* Left side */
+
+.contact__copy {
+  text-align: left;
+}
+
+.contact__copy .eyebrow {
+  text-align: left;
+}
+
+.contact__copy .contact__text {
+  margin-inline: 0;
+}
+
+
+/* Right side */
+
+.contact__art {
+  position: relative;
+
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Circular sci-fi frame behind Senku */
+
+.contact__art::before {
+  content: '';
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  border: 1px solid var(--panel-border-strong);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 50px rgba(79, 227, 193, 0.08);
+}
+
+
+/* Senku image */
+
+.contact__art img {
+  position: relative;
+  z-index: 1;
+
+  width: min(100%, 360px);
+  max-height: 360px;
+
+  object-fit: contain;
+
+  filter:
+    grayscale(1)
+    contrast(1.05);
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 940px) {
+
+  .hero__identity {
+    justify-content: center;
+  }
+
+  .contact__split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact__copy,
+  .contact__copy .eyebrow {
+    text-align: center;
+  }
+
+  .contact__copy .contact__text {
+    margin-inline: auto;
+  }
+
+  .contact__art {
+    min-height: 260px;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  .hero__headshot {
+    width: 72px;
+    height: 72px;
+  }
+
+  .hero__identity {
+    gap: 16px;
+  }
+
+}
