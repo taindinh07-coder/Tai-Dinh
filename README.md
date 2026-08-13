@@ -26,10 +26,10 @@ Hey there! I'm Tai, an MIS and SCM student at the University of Houston pursuing
 
 ```bash
 # Clone the repository
-git clone [https://taindinh07-coder.github.io/Tai-Dinh/]
+git clone https://github.com/taindinh07-coder/taindinh07-coder.github.io.git
 
 # Navigate to project directory
-cd [taindinh07-coder.github.io/Tai-Dinh]
+cd taindinh07-coder.github.io
 
 # Open in your preferred editor
 code .
