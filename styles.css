@@ -856,7 +856,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
   z-index: 1;
 
   width: min(100%, 360px);
-  max-height: 360px;
+  max-height: 400px;
 
   object-fit: contain;
 
