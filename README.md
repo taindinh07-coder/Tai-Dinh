@@ -11,9 +11,10 @@ Hey there! I'm Tai, an MIS and SCM student at the University of Houston pursuing
 
 ## 🚀 Experience Highlights
 - **Amazon**: Operations Intern SU'26
+- **Incoming @ Wells Fargo**: COO Global Operations Intern SU'27
 
 ## 🔧 Technical Skills
-- **Programming**: Python, SQL, JavaScript, HTML/CSS
+- **Programming**: Python, SQL(MySQL), JavaScript, HTML/CSS
 - **Data Analysis**: Pandas, Selenium, PowerBI, Excel, NumPy
 - **Tools**: Power Automate, Git, Microsoft Suite
 
