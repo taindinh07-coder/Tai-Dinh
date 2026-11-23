@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#060911">
-  <meta name="description" content="Tai Dinh — MIS & Supply Chain Management student and aspiring software engineer. Portfolio of projects, experience, and skills.">
-  <title>Tai Dinh — Portfolio</title>
+  <meta name="theme-color" content="#121316">
+  <meta name="description" content="Tai Dinh is an MIS and Supply Chain Management student at the University of Houston who builds software and data projects. See his experience, projects, and skills.">
+  <title>Tai Dinh | Portfolio</title>
 
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23060911'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='6' fill='none' stroke='%234fe3c1' stroke-width='1.5'/%3E%3Ccircle cx='27' cy='16' r='2' fill='%234fe3c1'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23121316'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ebe5d6'/%3E%3Cellipse cx='16' cy='16' rx='12' ry='4.5' fill='none' stroke='%23b9d8a9' stroke-width='1.2' transform='rotate(-20 16 16)'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -20,17 +20,27 @@
 <body>
 
   <canvas id="stars" aria-hidden="true"></canvas>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="rail" aria-hidden="true">
+    <span class="rail__fill" id="railFill"></span>
+  </div>
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ============ NAV ============ -->
+  <!-- Nav -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
 
-      <a href="#top" class="nav__mark">T<span>.</span>DINH</a>
+      <a href="#top" class="nav__mark" aria-label="Tai Dinh, back to top">
+        <svg class="nav__logo" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="5.5" />
+          <ellipse cx="16" cy="16" rx="13" ry="5" transform="rotate(-20 16 16)" />
+        </svg>
+        Tai Dinh
+      </a>
 
-      <nav class="nav__nav">
+      <nav class="nav__nav" aria-label="Primary">
         <ul class="nav__links" id="navLinks">
           <li><a href="#about" data-nav>About</a></li>
           <li><a href="#experience" data-nav>Experience</a></li>
@@ -41,15 +51,9 @@
       </nav>
 
       <div class="nav__right">
-        <a class="nav__cta" href="assets/Tai Dinh Resume 2027.pdf" download>Résumé</a>
+        <a class="nav__cta" href="assets/Tai Dinh Resume 2027.pdf" download>Resume</a>
 
-        <button
-          class="nav__toggle"
-          id="navToggle"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          <span></span>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
           <span></span>
           <span></span>
         </button>
@@ -61,522 +65,406 @@
 
   <main id="main">
 
-    <!-- ============ HERO ============ -->
+    <!-- Hero -->
     <section class="hero" id="top">
-      <div class="container hero__inner">
 
+      <div class="hero__sky" aria-hidden="true">
+        <div class="planet">
+          <div class="planet__surface"></div>
+          <div class="planet__shade"></div>
+        </div>
+
+        <svg class="orbit" viewBox="0 0 1000 1000">
+          <ellipse id="orbitPath" cx="500" cy="500" rx="470" ry="150" transform="rotate(-24 500 500)" />
+          <circle class="orbit__moon" r="7">
+            <animateMotion dur="38s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#orbitPath" />
+            </animateMotion>
+          </circle>
+        </svg>
+
+        <div class="moon moon--far"></div>
+        <div class="moon moon--near"></div>
+      </div>
+
+      <div class="container hero__inner">
         <div class="hero__content">
 
-          <!-- Headshot + Name -->
-          <div class="hero__identity">
+          <p class="status">
+            <span class="status__dot"></span>
+            Open to data analytics and SWE internships
+          </p>
 
-            <div class="hero__headshot">
-              <img
-                src="assets/Headshot.jpeg"
-                alt="Tai Dinh headshot"
-              >
-            </div>
-
-            <h1 class="hero__name">Tai Dinh</h1>
-
-          </div>
+          <h1 class="hero__name">
+            <span class="hero__line"><span>Tai</span></span>
+            <span class="hero__line"><span>Dinh</span></span>
+          </h1>
 
           <p class="hero__role">
-            <span id="typed"></span>
-            <span class="cursor" aria-hidden="true">|</span>
+            <span id="typed">MIS &amp; SCM student</span><span class="cursor" aria-hidden="true"></span>
           </p>
 
           <p class="hero__bio">
-            I study Management Information Systems &amp; Supply Chain Management, and I build
-            neat software on the side. I like taking messy systems — data, workflows, spreadsheets —
+            I study Management Information Systems and Supply Chain Management, and I build
+            software on the side. I like taking messy systems like data, workflows, and spreadsheets
             and turning them into something that runs itself.
           </p>
 
           <div class="hero__ctas">
-            <a href="#projects" class="btn btn--primary">View Projects</a>
-            <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+            <a href="#projects" class="btn btn--primary">View projects</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
           </div>
 
         </div>
 
-
-        <div class="hero__visual" aria-hidden="true">
-
-          <svg class="rings" viewBox="0 0 400 400">
-
-            <ellipse
-              cx="200"
-              cy="200"
-              rx="184"
-              ry="120"
-              class="ring ring--outer"
-            />
-
-            <ellipse
-              cx="200"
-              cy="200"
-              rx="140"
-              ry="90"
-              class="ring ring--inner"
-              transform="rotate(-18 200 200)"
-            />
-
-          </svg>
-
-          <div class="core"></div>
-          <div class="satellite"></div>
-
-        </div>
-
+        <figure class="id-chip">
+          <img src="assets/Headshot.jpeg" alt="Tai Dinh headshot" width="56" height="56">
+          <figcaption>
+            <span class="id-chip__label">Studying at</span>
+            <span class="id-chip__value">University of Houston</span>
+          </figcaption>
+        </figure>
       </div>
 
-
-      <a href="#about" class="scroll-cue" aria-label="Scroll to content">
-        <span></span>
+      <a href="#about" class="scroll-cue">
+        <span class="scroll-cue__text">Scroll to explore</span>
+        <span class="scroll-cue__icon"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span>
       </a>
 
     </section>
 
 
-    <!-- ============ ABOUT ============ -->
+    <!-- About -->
     <section class="section" id="about">
-
       <div class="container">
 
-        <div class="section__head" data-reveal>
-          <span class="eyebrow">// about</span>
-          <h2 class="section__title">Turning systems into software</h2>
-        </div>
-
+        <header class="section__head" data-reveal>
+          <h2 class="section__title">About Me</h2>
+          <p class="section__sub">Turning systems into software</p>
+        </header>
 
         <div class="about__grid">
 
           <div class="about__text" data-reveal>
-
-            <p>
-              Hey how's it going! I'm Tai, a Junior that has been drawn into the compelxities of Management Information Systems and Supply Chain
-              because of the complex problem solving and critical thinking that always challenges me to grow and learn new skills. I like to program and started web development and learning python because
-              I love building my own personal projects and can create anything I imagine. This led me to seeking challenging problems that I enjoy - from cleaning messy data sets or shipping actionable results that people will actually use.
+            <p class="about__lead">
+              Hey, how's it going! I'm Tai, a junior who got pulled into Management Information
+              Systems and Supply Chain because the problems are complex and they keep pushing me
+              to think critically and learn new skills.
             </p>
-
             <p>
-              Right now, I am currently developing personal python/web devleopment projects that bridge strategic data analysis and my personal hobbies/interests while seeking Summer 2027 internships.
+              I started with web development and Python because I love building personal projects
+              where I can make anything I can imagine. That led me to look for challenging problems
+              I actually enjoy, from cleaning messy data sets to shipping results people will use.
             </p>
-
+            <p>
+              Right now I'm building personal Python and web projects that connect data analysis
+              with my own hobbies and interests, and I'm looking for Summer 2027 internships.
+            </p>
           </div>
 
-
-          <aside class="telemetry" data-reveal>
-
-            <div class="telemetry__row">
-              <span class="telemetry__label">Focus</span>
-              <span class="telemetry__value">Data Analytics &amp; Software Engineering</span>
-            </div>
-
-            <div class="telemetry__row">
-              <span class="telemetry__label">Education</span>
-              <span class="telemetry__value">University of Houston</span>
-            </div>
-
-            <div class="telemetry__row">
-              <span class="telemetry__label">Major</span>
-              <span class="telemetry__value">MIS &amp; SCM</span>
-            </div>
-
-            <div class="telemetry__row">
-              <span class="telemetry__label">Status</span>
-              <span class="telemetry__value">Open to Data Analytics/SWE internships</span>
-            </div>
-
+          <aside class="panel telemetry" data-reveal aria-label="Quick facts">
+            <dl>
+              <div class="telemetry__row">
+                <dt>Focus</dt>
+                <dd>Data analytics and software engineering</dd>
+              </div>
+              <div class="telemetry__row">
+                <dt>Education</dt>
+                <dd>University of Houston</dd>
+              </div>
+              <div class="telemetry__row">
+                <dt>Major</dt>
+                <dd>MIS and SCM</dd>
+              </div>
+              <div class="telemetry__row">
+                <dt>Status</dt>
+                <dd><span class="status__dot"></span> Open to internships</dd>
+              </div>
+            </dl>
           </aside>
 
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- ============ EXPERIENCE ============ -->
+    <!-- Experience -->
     <section class="section" id="experience">
-
       <div class="container">
 
-        <div class="section__head" data-reveal>
-          <span class="eyebrow">// experience</span>
-          <h2 class="section__title">Where I've worked</h2>
-        </div>
+        <header class="section__head" data-reveal>
+          <h2 class="section__title">Experience</h2>
+          <p class="section__sub">Where I've worked</p>
+        </header>
 
-
-        <div class="timeline">
-
-          <div class="timeline__item" data-reveal>
-
-            <p class="timeline__meta">
-              JUN 2026 — AUG 2026
-            </p>
-
-            <h3 class="timeline__role">
-              Operations Intern
-            </h3>
-
-            <p class="timeline__org">
-              Amazon
-            </p>
+        <ol class="timeline">
+          <li class="timeline__item panel" data-reveal>
+            <div class="timeline__top">
+              <div>
+                <h3 class="timeline__role">Operations Intern</h3>
+                <p class="timeline__org">Amazon</p>
+              </div>
+              <p class="timeline__meta">Jun 2026 to Aug 2026</p>
+            </div>
 
             <ul class="timeline__list">
-
               <li>
-                Architected an Inventory Consolidation dashboard through AWS migration
-                (Lambda, API Gateway, DynamoDB) via AWS CDK
+                Built an Inventory Consolidation dashboard as part of an AWS migration, using Lambda,
+                API Gateway, and DynamoDB deployed through AWS CDK
               </li>
-
               <li>
-                Engineered a Slack bot via Python (Slack Web API, Selenium) cutting
-                fault-detection latency to ~1 min across 300+ daily alerts
+                Wrote a Python Slack bot (Slack Web API, Selenium) that cut fault-detection time to
+                about 1 minute across 300+ daily alerts
               </li>
-
               <li>
-                Streamlined outbound sortation to reduce CPT deviation by 20%, driving
-                95%+ last-mile delivery compliance across shipments
+                Streamlined outbound sortation to reduce CPT deviation by 20%, keeping last-mile
+                delivery compliance above 95%
               </li>
-
             </ul>
-
-          </div>
-
-        </div>
+          </li>
+        </ol>
 
       </div>
-
     </section>
 
 
-    <!-- ============ PROJECTS ============ -->
+    <!-- Projects -->
     <section class="section" id="projects">
-
       <div class="container">
 
-        <div class="section__head" data-reveal>
-          <span class="eyebrow">// projects</span>
-          <h2 class="section__title">Things I've built</h2>
-        </div>
-
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <h2 class="section__title">Projects</h2>
+            <p class="section__sub">Things I've built</p>
+          </div>
+          <a class="section__link" href="https://github.com/taindinh07-coder" aria-label="All projects on GitHub">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </header>
 
         <div class="projects__grid">
 
-          <article class="project-card tilt" data-reveal>
+          <article class="project" data-reveal>
+            <div class="project__frame">
+              <svg class="project__art" viewBox="0 0 400 260" aria-hidden="true">
+                <defs>
+                  <radialGradient id="artMoon" cx="38%" cy="34%" r="70%">
+                    <stop offset="0" stop-color="#d9d3c4" />
+                    <stop offset=".6" stop-color="#6f6b62" />
+                    <stop offset="1" stop-color="#1b1c20" />
+                  </radialGradient>
+                </defs>
+                <circle cx="290" cy="250" r="190" fill="url(#artMoon)" />
+                <circle cx="230" cy="150" r="18" fill="#000" opacity=".22" />
+                <circle cx="320" cy="120" r="10" fill="#000" opacity=".2" />
+                <circle cx="270" cy="200" r="28" fill="#000" opacity=".16" />
+                <circle cx="360" cy="190" r="14" fill="#000" opacity=".18" />
+                <circle cx="60" cy="50" r="1.4" fill="#ebe5d6" />
+                <circle cx="110" cy="90" r="1" fill="#ebe5d6" />
+                <circle cx="40" cy="160" r="1.2" fill="#ebe5d6" />
+                <circle cx="150" cy="30" r=".9" fill="#ebe5d6" />
+              </svg>
+              <span class="project__placeholder">Preview coming soon</span>
+            </div>
 
-            <p class="project-card__index">01</p>
-
-            <h3 class="project-card__title">
-              Inventory Forecasting Tool
-            </h3>
-
-            <p class="project-card__desc">
+            <h3 class="project__title">Covid-19 Data Analysis</h3>
+            <p class="project__desc">
               Predicts short-term stock needs from historical sales data, so a small team stops
-              guessing reorder timing. Utilized restaraunt data to train predictions and analyze seasonal stock trends.
+              guessing reorder timing. Used restaurant data to train predictions and analyze seasonal
+              stock trends.
             </p>
-
-            <div class="project-card__tags">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">scikit-learn</span>
+            <ul class="project__tags">
+              <li>MySQL</li>
+              <li>Power BI</li>
+              <li>Excel</li>
+            </ul>
+            <div class="project__links">
+              <a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
             </div>
-
-            <div class="project-card__links">
-              <a href="#">
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-
-              <a href="#">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Live
-              </a>
-            </div>
-
           </article>
 
+          <article class="project" data-reveal>
+            <div class="project__frame">
+              <svg class="project__art" viewBox="0 0 400 260" aria-hidden="true">
+                <defs>
+                  <radialGradient id="artGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset=".55" stop-color="#ebe5d6" stop-opacity=".9" />
+                    <stop offset=".62" stop-color="#ebe5d6" stop-opacity=".25" />
+                    <stop offset="1" stop-color="#ebe5d6" stop-opacity="0" />
+                  </radialGradient>
+                </defs>
+                <circle cx="200" cy="105" r="86" fill="url(#artGlow)" />
+                <circle cx="200" cy="105" r="48" fill="#0c0d0f" />
+                <path d="M0 260 L0 205 L60 172 L105 196 L160 150 L215 188 L262 160 L320 196 L400 168 L400 260 Z" fill="#26272b" />
+                <path d="M0 260 L0 230 L80 210 L140 228 L230 204 L300 226 L400 212 L400 260 Z" fill="#17181b" />
+              </svg>
+              <span class="project__placeholder">Preview coming soon</span>
+            </div>
 
-          <article class="project-card tilt" data-reveal>
-
-            <p class="project-card__index">02</p>
-
-            <h3 class="project-card__title">
-              Campus Marketplace App
-            </h3>
-
-            <p class="project-card__desc">
-              A full-stack web app for students to buy and sell snacks on campus. Utilized by 20+ students to simulate real-world market simulations and web app interactivity.
+            <h3 class="project__title">Campus Marketplace App</h3>
+            <p class="project__desc">
+              A full-stack web app for students to buy and sell snacks on campus. Used by 20+
+              students to simulate a real marketplace and test how people interact with the app.
             </p>
-
-            <div class="project-card__tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">HTML/CSS</span>
-              <span class="tag">Python</span>
+            <ul class="project__tags">
+              <li>JavaScript</li>
+              <li>HTML/CSS</li>
+              <li>Python</li>
+            </ul>
+            <div class="project__links">
+              <a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
             </div>
-
-            <div class="project-card__links">
-              <a href="#">
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-
-              <a href="#">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Live
-              </a>
-            </div>
-
           </article>
 
+          <article class="project" data-reveal>
+            <div class="project__frame">
+              <svg class="project__art" viewBox="0 0 400 260" aria-hidden="true">
+                <g stroke="#ebe5d6" stroke-opacity=".12" fill="none">
+                  <circle cx="200" cy="130" r="40" />
+                  <circle cx="200" cy="130" r="80" />
+                  <circle cx="200" cy="130" r="120" />
+                  <line x1="0" y1="130" x2="400" y2="130" />
+                  <line x1="200" y1="0" x2="200" y2="260" />
+                </g>
+                <polyline points="92,72 150,96 196,82 248,128 300,116 330,176" fill="none" stroke="#b9d8a9" stroke-opacity=".7" stroke-width="1" />
+                <g fill="#ebe5d6">
+                  <circle cx="92" cy="72" r="3" />
+                  <circle cx="150" cy="96" r="2.4" />
+                  <circle cx="196" cy="82" r="3.4" />
+                  <circle cx="248" cy="128" r="2.6" />
+                  <circle cx="300" cy="116" r="3" />
+                  <circle cx="330" cy="176" r="2.2" />
+                  <circle cx="60" cy="200" r="1" />
+                  <circle cx="130" cy="210" r="1.2" />
+                  <circle cx="350" cy="40" r="1" />
+                </g>
+              </svg>
+              <span class="project__placeholder">Preview coming soon</span>
+            </div>
 
-          <article class="project-card tilt" data-reveal>
-
-            <p class="project-card__index">03</p>
-
-            <h3 class="project-card__title">
-              Supply Chain Dashboard
-            </h3>
-
-            <p class="project-card__desc">
-              An interactive dashboard visualizing logistics and inventory data across
-              warehouses. Built using historical Amazon data, cleaned and compiled into a PowerBI dashboard, visualizing degradation across multiple machines.
+            <h3 class="project__title">Supply Chain Dashboard</h3>
+            <p class="project__desc">
+              An interactive dashboard showing logistics and inventory data across warehouses. Built
+              from historical Amazon data that I cleaned and compiled into Power BI to track wear
+              across multiple machines.
             </p>
-
-            <div class="project-card__tags">
-              <span class="tag">SQL</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">Excel</span>
+            <ul class="project__tags">
+              <li>SQL</li>
+              <li>Power BI</li>
+              <li>Excel</li>
+            </ul>
+            <div class="project__links">
+              <a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i> Code</a>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
             </div>
-
-            <div class="project-card__links">
-              <a href="#">
-                <i class="fa-brands fa-github"></i>
-                Code
-              </a>
-
-              <a href="#">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                Live
-              </a>
-            </div>
-
           </article>
 
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- ============ SKILLS ============ -->
+    <!-- Skills -->
     <section class="section" id="skills">
-
       <div class="container">
 
-        <div class="section__head" data-reveal>
-          <span class="eyebrow">// skills</span>
-          <h2 class="section__title">What I work with</h2>
-        </div>
-
+        <header class="section__head" data-reveal>
+          <h2 class="section__title">Skills</h2>
+          <p class="section__sub">What I work with</p>
+        </header>
 
         <div class="skills" data-reveal>
 
-
           <div class="skills__group">
-
-            <p class="skills__group-title">
-              Languages &amp; Databases
-            </p>
-
-            <div class="skills__grid">
-
-              <div class="skill-card">
-                <i class="fa-brands fa-python"></i>
-                <span>Python</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-solid fa-database"></i>
-                <span>SQL</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-square-js"></i>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-html5"></i>
-                <span>HTML5</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-css3-alt"></i>
-                <span>CSS3</span>
-              </div>
-
-            </div>
-
+            <h3 class="skills__title">Languages and databases</h3>
+            <ul class="skills__list">
+              <li><i class="fa-brands fa-python" aria-hidden="true"></i> Python</li>
+              <li><i class="fa-solid fa-database" aria-hidden="true"></i> SQL</li>
+              <li><i class="fa-brands fa-square-js" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
+              <li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+            </ul>
           </div>
 
-
           <div class="skills__group">
-
-            <p class="skills__group-title">
-              Frameworks &amp; Libraries
-            </p>
-
-            <div class="skills__grid">
-
-              <div class="skill-card">
-                <i class="fa-solid fa-flask"></i>
-                <span>Flask</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-react"></i>
-                <span>React</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-node-js"></i>
-                <span>Node.js</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>Pandas</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-selenium"></i>
-                <span>Selenium</span>
-              </div>
-
-            </div>
-
+            <h3 class="skills__title">Frameworks and libraries</h3>
+            <ul class="skills__list">
+              <li><i class="fa-solid fa-flask" aria-hidden="true"></i> Flask</li>
+              <li><i class="fa-brands fa-react" aria-hidden="true"></i> React</li>
+              <li><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</li>
+              <li><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Pandas</li>
+              <li><i class="fa-solid fa-robot" aria-hidden="true"></i> Selenium</li>
+            </ul>
           </div>
 
-
           <div class="skills__group">
-
-            <p class="skills__group-title">
-              Tools &amp; Platforms
-            </p>
-
-            <div class="skills__grid">
-
-              <div class="skill-card">
-                <i class="fa-brands fa-git-alt"></i>
-                <span>Git</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-solid fa-table-cells"></i>
-                <span>Excel</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-solid fa-chart-column"></i>
-                <span>Power BI</span>
-              </div>
-
-              <div class="skill-card">
-                <i class="fa-solid fa-vscode"></i>
-                <span>VSCode</span>
-              </div>
-
-            </div>
-
+            <h3 class="skills__title">Tools and platforms</h3>
+            <ul class="skills__list">
+              <li><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+              <li><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</li>
+              <li><i class="fa-solid fa-table-cells" aria-hidden="true"></i> Excel</li>
+              <li><i class="fa-solid fa-chart-column" aria-hidden="true"></i> Power BI</li>
+              <li><i class="fa-solid fa-code" aria-hidden="true"></i> VS Code</li>
+            </ul>
           </div>
 
         </div>
-
       </div>
-
     </section>
 
 
-    <!-- ============ CONTACT ============ -->
+    <!-- Contact -->
     <section class="section contact" id="contact">
+      <div class="container contact__split">
 
-      <div class="container">
+        <div class="contact__copy">
+          <h2 class="section__title" data-reveal>Contact</h2>
 
-        <span class="eyebrow">// contact</span>
+          <p class="contact__title" data-reveal>Let's build something.</p>
 
-        <h2 class="contact__title" data-reveal>
-          Let's build something.
-        </h2>
+          <p class="contact__text" data-reveal>
+            I'm open to software engineering and data analytics internships, plus new project
+            collaborations. Email is the fastest way to reach me.
+          </p>
 
-        <p class="contact__text" data-reveal>
-          I'm open to software engineering/data analytics internships and new project collaborations.
-          The fastest way to reach me is by email.
-        </p>
+          <div class="contact__actions" data-reveal>
+            <a href="mailto:taindinh07@gmail.com" class="btn btn--primary">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              taindinh07@gmail.com
+            </a>
+            <a href="assets/Tai Dinh Resume 2027.pdf" class="btn btn--ghost" download>
+              <i class="fa-solid fa-download" aria-hidden="true"></i>
+              Resume
+            </a>
+          </div>
 
-        <div class="contact__actions" data-reveal>
-
-          <a
-            href="mailto:taindinh07@gmail.com"
-            class="btn btn--primary"
-          >
-            <i class="fa-solid fa-envelope"></i>
-            taindinh07@gmail.com
-          </a>
-
-          <a
-            href="assets/Tai Dinh Resume 2027.pdf"
-            class="btn btn--ghost"
-            download
-          >
-            <i class="fa-solid fa-download"></i>
-            Résumé
-          </a>
-
+          <div class="social-row" data-reveal>
+            <a href="https://www.linkedin.com/in/tai-dinh-296556327/" class="social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/taindinh07-coder" class="social-link" aria-label="GitHub">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
-        <div class="social-row" data-reveal>
-          <a
-            href="https://www.linkedin.com/in/tai-dinh-296556327/"
-            class="social-link"
-            aria-label="LinkedIn"
-          >
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a
-            href="https://github.com/taindinh07-coder"
-            class="social-link"
-            aria-label="GitHub"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
+
+        <div class="contact__art" data-reveal>
+          <img src="assets/senku.jpg" alt="Senku-inspired manga illustration">
         </div>
-      </div>
-      <!-- Senku image -->
-      <div class="contact__art" data-reveal>
-        <img
-          src="assets/senku.jpg"
-          alt="Senku-inspired manga illustration"
-        >
+
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>
-      © <span id="year"></span>
-      Tai Dinh — built with HTML, CSS &amp; JS.
-    </p>
-
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Tai Dinh</p>
+      <p>Built with HTML, CSS and JavaScript</p>
+    </div>
   </footer>
+
   <script src="script.js"></script>
-  
 </body>
 </html>
